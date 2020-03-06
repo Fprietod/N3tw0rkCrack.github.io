@@ -1,0 +1,347 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* Reset para REMS -62.5% = 10px de 16px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+}
+
+/** Utilidades **/
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.seccion2{
+    margin-top: 5rem;
+}
+.fw-300{
+    font-weight: 300;
+}
+.fw-700{
+    font-weight: 700;
+}
+.centrar-texto{
+    text-align: center;
+}
+.margen-texto{
+    margin: 0;
+}
+.interlineado {
+    margin-bottom: 3rem;
+}
+.padding-1{
+    padding-bottom: 1rem;
+}
+
+/* Grid */ 
+.grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.centrar-columnas{
+    justify-content: center;
+}
+.columnas-6{
+    flex: 0 0 calc(50% - 1rem);
+}
+.columnas-10{
+    flex: 0 0 calc(83.3% - 1rem);
+}
+.columnas-12{
+    flex: 0 0 100%;
+}
+
+/** Botones **/
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+@media (min-width: 76.8rem){
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+    background-color: #ddd;
+    color: black;
+}
+.boton-azul{
+    background-color: #000023;
+}
+.boton-blanco{
+    background-color: white;
+    color: black;
+    text-transform: capitalize;
+}
+.alinear-boton{
+    display: flex;
+    justify-content: flex-end;
+}
+.boton-grande{
+    display: block;
+    width: 100%;
+}
+
+/** Globales **/
+img{
+    max-width: 100%;
+}
+.contenedor{
+    width: 75%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/* Heater*/
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+.site-header.inicio {
+    background-image: url(../img/escom2.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+}
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenido-header{
+        text-align: left;
+    }
+}
+.contenido-header h1 {
+    text-align: center;
+    color: black;
+}
+@media (min-width: 768px){
+    .contenido-header h1{
+        padding-top: 18rem;
+        margin-bottom: 0;
+    }
+}
+.contenido-header p{
+    text-align: center;
+    color: black;
+}
+@media (min-width: 768px){
+    .contenido-header p{
+        line-height: 2;
+        padding-bottom: 20rem;
+    }
+}
+.barra {
+    padding-top: 3rem;
+}
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Gudea', sans-serif;
+}
+.color-negro{
+    color: black;
+}
+.logo h2{
+    font-weight: 500;
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* Navegacion */
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
+@media (min-width: 768px){
+    .navegacion a{
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type{
+        margin: 0;
+    }
+}
+.navegacion a:hover{
+    color: #779ECB;
+}
+
+/* Footer */
+.site-footer{
+    background-color: 	#000023;
+    color: white;
+    margin: 0;
+}
+.contenedor-footer{
+    padding: 2rem 0;
+    text-align: center;
+}
+@media (min-width: 768px){
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.site-footer.ocultar nav{
+    display: none;
+}
+@media (min-width: 768px){
+    .site-footer.ocultar nav{
+        display: block;
+    }
+}
+
+/**** Iniciar Sesion ****/
+.formulario-sesion{
+    background-color: white;
+    padding: 5rem;
+}
+@media (min-width: 768px){
+    .formulario-sesion{
+        margin-top: -10rem;
+    }
+}
+.formulario-sesion .campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.formulario-sesion .campo label {
+    flex: 0 0 10rem;
+}
+.formulario-sesion .campo input:not([type="submit"]), 
+.formulario-sesion textarea{
+    flex: 1;
+    border: 1px solid  #e1e1e1;
+    padding: 1rem;
+}
+.formulario-sesion p{
+    flex: 1;
+    padding: 1rem;
+}
+.campo.user{
+    align-items: center;
+}
+.formulario-sesion textarea{
+    height: 20rem;
+}
+.formulario-sesion .campo select{
+    flex: 1;
+    border: 1px solid  #e1e1e1;
+    padding: 1rem;
+}
+.formulario-sesion .enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+.registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registro a{
+    margin-left: 1rem;
+}
+
+/**** Usuario ****/
+/* header */
+.site-usuario {
+    background-image: url(../img/usuario.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 30rem;
+}
+.contenedor-usuario{
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px){
+    .contenedor-usuario{
+        text-align: left;
+    }
+}
+.contenedor-usuario h1{
+    padding-bottom: 8rem;
+}
+
+/* Contenido */
+@media (min-width: 768px){
+    .contenido-usuario{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenedor-info{
+    flex-basis: 40%;
+    margin-bottom: 2rem;
+    }
+    .contenedor-proto{
+        flex-basis: calc(60% - 10rem);
+        margin-bottom: 2rem;
+    }
+}
+.texto-usuario h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .5rem;
+    background-color: #779ECB;
+    margin-top: 2rem;
+}
+.info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.info label{
+    margin-right: 1rem;
+}
